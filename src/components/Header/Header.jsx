@@ -11,6 +11,7 @@ const Header = () => {
       <Link to={ROUTES.HOME}>
       <img src={LOGO} alt="Stuff" />
       </Link>
+      
       </div>
 
       <div className={styles.info}>
