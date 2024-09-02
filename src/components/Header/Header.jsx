@@ -11,7 +11,7 @@ const Header = () => {
       <Link to={ROUTES.HOME}>
       <img src={LOGO} alt="Stuff" />
       </Link>
-      
+
       </div>
 
       <div className={styles.info}>
@@ -19,6 +19,7 @@ const Header = () => {
           <div className={styles.avatar} style={{backgroundImage:`url(${AVATAR})`}}></div>
          <div className={styles.username}>Guest</div>
         </div>
+
         <form className={styles.form}>
          <div className={styles.icon}>
           <svg className='icon'>
@@ -32,7 +33,22 @@ const Header = () => {
           onChange={()=>{}}
           value=""/>
          </div>
+
+         {true ** <div className={styles.box}>   </div>}
         </form>
+        <div className={styles.account}>
+          <Link to={ROUTES.HOME} className={styles.favourites}>
+          <svg className='icon-fav'>
+            <use xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#heart`}/>
+          </svg>
+          </Link>
+          <Link to={ROUTES.CART} className={styles.cart}>
+          <svg className='icon-cart'>
+            <use xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#bag`}/>
+          </svg>
+          <span className={styles.count}>2</span>
+          </Link>
+        </div>
       </div>
     </div>
   )
