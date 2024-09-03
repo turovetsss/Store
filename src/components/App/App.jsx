@@ -5,12 +5,14 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Sidebar from "../Sidebar/Sidebar";
 import { getCategories } from "../../feautures/categories/categoriesSlice";
+import { getProducts } from "../../feautures/products/productsSlice";
 
 const App=()=>{
   const dispatch=useDispatch();
 
   useEffect(()=>{
     dispatch(getCategories());
+    dispatch(getProducts());
   },[dispatch]);
 
   return (<div className="app">
